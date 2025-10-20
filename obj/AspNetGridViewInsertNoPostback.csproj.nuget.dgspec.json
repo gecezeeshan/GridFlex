@@ -1,0 +1,47 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\ZEESHAN\\Projects\\QuickRef\\FL\\GridFlex\\AspNetGridViewInsertNoPostback.csproj": {}
+  },
+  "projects": {
+    "D:\\ZEESHAN\\Projects\\QuickRef\\FL\\GridFlex\\AspNetGridViewInsertNoPostback.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ZEESHAN\\Projects\\QuickRef\\FL\\GridFlex\\AspNetGridViewInsertNoPostback.csproj",
+        "projectName": "AspNetGridViewInsertNoPostback",
+        "projectPath": "D:\\ZEESHAN\\Projects\\QuickRef\\FL\\GridFlex\\AspNetGridViewInsertNoPostback.csproj",
+        "packagesPath": "C:\\Users\\Syed Zeeshan\\.nuget\\packages\\",
+        "outputPath": "D:\\ZEESHAN\\Projects\\QuickRef\\FL\\GridFlex\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Syed Zeeshan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "targetAlias": "net48",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "targetAlias": "net48",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

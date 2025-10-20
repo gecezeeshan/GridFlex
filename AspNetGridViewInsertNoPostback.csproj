@@ -5,18 +5,27 @@
     <OutputType>Library</OutputType>
     <UseIISExpress>false</UseIISExpress>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-  </PropertyGroup>
 
-  <!-- Disable manual includes to avoid duplication -->
-  <PropertyGroup>
-    <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
-    <EnableDefaultContentItems>true</EnableDefaultContentItems>
+    <!-- Turn OFF implicit includes so we control everything -->
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultContentItems>false</EnableDefaultContentItems>
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Include only non-default content files -->
+    <!-- ASPX pages -->
+    <Content Include="Default.aspx" />
+
+    <!-- Config & docs -->
     <Content Include="Web.config" />
     <Content Include="README.md" />
+
+    <!-- Code-behind -->
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+
+    <!-- Everything inside App_Code -->
+    <Compile Include="App_Code\**\*.cs" />
   </ItemGroup>
 
 </Project>
