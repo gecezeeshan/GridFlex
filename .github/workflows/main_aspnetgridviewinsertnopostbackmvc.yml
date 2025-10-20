@@ -32,3 +32,25 @@ jobs:
         with:
           name: webapp
           path: output/webapp.zip
+
+deploy:
+  runs-on: windows-latest
+  needs: build
+  steps:
+    - name: Download artifact from build job
+      uses: actions/download-artifact@v4
+      with:
+        name: webapp
+
+    - name: Login to Azure
+      uses: azure/login@v2
+      with:
+        client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_ABAC2EF7F2CC49E4A71543796A3FD985 }}
+        tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_D6F962F2D28B47D8BDB3CB2A81D66E34 }}
+        subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_70140A8315AA4470BDFA42F4A2FD1F4B }}
+
+    - name: Deploy to Azure Web App
+      uses: azure/webapps-deploy@v3
+      with:
+        app-name: 'AspNetGridViewInsertNoPostbackMVC'
+        package: 'output/webapp.zip'
