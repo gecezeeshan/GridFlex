@@ -33,7 +33,7 @@ jobs:
             /p:SkipInvalidConfigurations=true ^
             /p:PackageLocation="output\webapp.zip"
 
-      - name: ✅ Upload artifact for deployment
+      - name: Upload artifact for deployment
         uses: actions/upload-artifact@v4
         with:
           name: webapp
@@ -55,7 +55,7 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_D6F962F2D28B47D8BDB3CB2A81D66E34 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_70140A8315AA4470BDFA42F4A2FD1F4B }}
 
-      - name: 🚀 Deploy to Azure Web App
+      - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'AspNetGridViewInsertNoPostbackMVC'
