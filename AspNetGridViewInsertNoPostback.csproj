@@ -1,30 +1,31 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
     <OutputType>Library</OutputType>
     <UseIISExpress>false</UseIISExpress>
-    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-
-    <!-- Turn OFF implicit includes so we control everything -->
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <EnableDefaultContentItems>false</EnableDefaultContentItems>
   </PropertyGroup>
 
+  <!-- ✅ Add classic ASP.NET assemblies -->
   <ItemGroup>
-    <!-- ASPX pages -->
-    <Content Include="Default.aspx" />
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Configuration" />
+  </ItemGroup>
 
-    <!-- Config & docs -->
+  <ItemGroup>
+    <Content Include="Default.aspx" />
     <Content Include="Web.config" />
     <Content Include="README.md" />
-
-    <!-- Code-behind -->
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-
-    <!-- Everything inside App_Code -->
     <Compile Include="App_Code\**\*.cs" />
   </ItemGroup>
 
