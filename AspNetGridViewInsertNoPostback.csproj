@@ -4,16 +4,14 @@
     <TargetFramework>net48</TargetFramework>
     <OutputType>Library</OutputType>
     <UseIISExpress>false</UseIISExpress>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Default.aspx" />
-    <Content Include="Web.config" />
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Content Include="README.md" />
-    <Compile Include="App_Code\**\*.cs" />
+    <Content Include="**\*.aspx" />
+    <Content Include="**\*.config" />
+    <Content Include="**\*.md" />
+    <Compile Include="**\*.cs" />
   </ItemGroup>
 
 </Project>
