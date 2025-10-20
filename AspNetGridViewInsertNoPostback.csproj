@@ -7,11 +7,16 @@
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
   </PropertyGroup>
 
+  <!-- Disable manual includes to avoid duplication -->
+  <PropertyGroup>
+    <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
+    <EnableDefaultContentItems>true</EnableDefaultContentItems>
+  </PropertyGroup>
+
   <ItemGroup>
-    <Content Include="**\*.aspx" />
-    <Content Include="**\*.config" />
-    <Content Include="**\*.md" />
-    <Compile Include="**\*.cs" />
+    <!-- Include only non-default content files -->
+    <Content Include="Web.config" />
+    <Content Include="README.md" />
   </ItemGroup>
 
 </Project>
